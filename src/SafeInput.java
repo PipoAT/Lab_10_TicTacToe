@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class SafeInput {
 
     // Part D getRangedInt
+    // this will check if the user input is between 1 and 3
     /**
      *
      * @param pipe a Scanner opened to read from System.in
@@ -39,6 +40,7 @@ public class SafeInput {
 
 
     // Part F getYNConfirm
+    // this will check for user input is Y/N when playing again
     /**
      *
      * @param pipe a Scanner opened to read from System.in

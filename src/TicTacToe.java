@@ -19,15 +19,15 @@ public class TicTacToe {
                 int row = SafeInput.getRangedInt(scanner, "Enter the row (1-3): ", 1, 3); // user input for row
                 int col = SafeInput.getRangedInt(scanner, "Enter the column (1-3): ", 1, 3); // user input for column
 
-                // Convert player move coordinates to array indices
+                // convert player move coordinates to array indices
                 row--;
                 col--;
 
-                // Check if the move is valid
+                // check if the move is valid
                 if (isValidMove(row, col)) {
                     board[row][col] = currentPlayer;
 
-                    // Check for win or tie
+                    // check for win or tie
                     if (isWin(currentPlayer)) {
                         display();
                         System.out.println("Player " + currentPlayer + " wins!");
@@ -38,13 +38,13 @@ public class TicTacToe {
                         break;
                     }
 
-                    // Toggle the player
+                    // toggle the player/switch turns
                     currentPlayer = (currentPlayer.equals("X")) ? "O" : "X";
                 } else {
                     System.out.println("Invalid move. Try again.");
                 }
             }
-            // Ask for user input if they would like to play again
+            // ask for user input if they would like to play again
             playAgain = SafeInput.getYNConfirm(scanner, "Would you like to play again? Input Y or N: ");
         } while (playAgain);
 
